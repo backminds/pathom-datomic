@@ -2,8 +2,7 @@
  ["src"]
 
  :deps
- {com.wsscode/pathom  {:mvn/version "2.3.0-alpha4"}
-  org.slf4j/slf4j-api {:mvn/version "1.7.30"}}
+ {com.wsscode/pathom  {:mvn/version "2.3.1"}}
 
  :aliases
  {:provided
@@ -18,5 +17,5 @@
   :test
   {:extra-paths ["test"]
    :extra-deps  {com.cognitect/test-runner {:git/url "https://github.com/cognitect-labs/test-runner.git"
-                                            :sha     "209b64504cb3bd3b99ecfec7937b358a879f55c1"}}
+                                            :sha     "b6b3193fcc42659d7e46ecd1884a228993441182"}}
    :main-opts   ["-m" "cognitect.test-runner"]}}}

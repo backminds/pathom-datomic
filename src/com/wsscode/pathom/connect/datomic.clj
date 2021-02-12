@@ -6,10 +6,7 @@
             [com.wsscode.pathom.connect.planner :as pcp]
             [com.wsscode.pathom.core :as p]
             [com.wsscode.pathom.sugar :as ps]
-            [edn-query-language.core :as eql])
-  (:import [org.slf4j LoggerFactory Logger]))
-
-(defonce logger ^Logger (LoggerFactory/getLogger "pathom-datomic"))
+            [edn-query-language.core :as eql]))
 
 (s/def ::db any?)
 (s/def ::schema (s/map-of ::p/attribute map?))
@@ -29,7 +26,6 @@
 (s/def ::schema (s/map-of :db/ident ::schema-entry))
 
 (defn raw-datomic-q [{::keys [datomic-driver-q]} & args]
-  (.debug logger "{}" args)
   (apply datomic-driver-q args))
 
 (defn raw-datomic-db [{::keys [datomic-driver-db]} conn]
